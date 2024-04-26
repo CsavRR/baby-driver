@@ -28,3 +28,14 @@ for azon in lista:
         fuvarszam += 1
 
 print(f'4. feladat: {fuvarszam} fuvar alatt {bevetel}$')
+
+fuvarok = {}
+
+for fuvar in lista:
+    if fuvar.fizetesmod not in fuvarok.keys():
+        fuvarok[fuvar.fizetesmod] = 1
+    else:
+        fuvarok[fuvar.fizetesmod] += 1
+print('5. feladat:')
+for k,v in fuvarok.items():
+    print(f'\t{k}: {v} fuvar')
